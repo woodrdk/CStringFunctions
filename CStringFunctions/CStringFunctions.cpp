@@ -1,7 +1,6 @@
 // Robert Wood Jr
 // Programming Assignment 8
 // CStringFunctions
-// 
 
 #include <iostream>
 #include <cstring>
@@ -51,17 +50,14 @@ int main() {
 }
 
 void reverse(char * word) {
-	
 	for ( int i = 0; i < strlen(word) / 2; i++)
 	{
 		char temp = word[i];
 		word[i] = word[strlen(word) - i - 1];
 		word[strlen(word) - i - 1] = temp;
 	}
-
 	// more advanced way to do it
 	// reverse(word, word + strlen(word));
-	
 }
 int wordCount(char * sentence) {
 	int numOfWords = 0;
