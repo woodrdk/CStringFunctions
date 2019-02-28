@@ -51,12 +51,35 @@ int main() {
 }
 
 void reverse(char * word) {
-	// TO DO: implement this function
+	//// TO DO: implement this function
+	//
+	//char wordRev[] = { '\0' };
+	//strncpy(wordRev, word, strlen(word));
+	////for (int i = 0; i < strlen(word); ++i) {
+	////	wordRev[i] = word[i];
+	////}
+	//int count = 0;
+	//for (size_t r = strlen(word); r >= 0; --r) {
+	//	word[count] = wordRev[r] ;
+	//	++count;
+	//}
 }
 int wordCount(char * sentence) {
 	// TO DO: implement this function
-	return 0;
+	int numOfWords = 0;
+	/*if (sentence == NULL) {
+		return 0;
+	}*/
+
+	
+
+	return numOfWords;
 }
 void nameFormatter(char * first, char * middle, char * last, char * fullName) {
 	// TO DO: implement this function
+	strncpy(fullName, last, strlen(last));
+	strncat(fullName, ", ", 2);
+	strncat(fullName, first, strlen(first));
+	strncat(fullName, " ", 1);
+	strncat(fullName, middle, 1);
 }
