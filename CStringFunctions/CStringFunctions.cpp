@@ -51,32 +51,36 @@ int main() {
 }
 
 void reverse(char * word) {
-	//// TO DO: implement this function
-	//
-	//char wordRev[] = { '\0' };
-	//strncpy(wordRev, word, strlen(word));
-	////for (int i = 0; i < strlen(word); ++i) {
-	////	wordRev[i] = word[i];
-	////}
-	//int count = 0;
-	//for (size_t r = strlen(word); r >= 0; --r) {
-	//	word[count] = wordRev[r] ;
-	//	++count;
-	//}
-}
-int wordCount(char * sentence) {
-	// TO DO: implement this function
-	int numOfWords = 0;
-	/*if (sentence == NULL) {
-		return 0;
+	
+	/*char temp = ' ';
+	for (int a = 0, z = strlen(word); a < strlen(word); ++a, --z) {
+		temp = word[a];
+		word[a] = word[z];
+		word[z] = temp;
+	}*/
+	/*int count = 0;
+	char wordRev[] = {};
+	strncpy(wordRev, word, strlen(word));
+	for (size_t r = strlen(word); r >= 0; --r) {
+		word[count] = wordRev[r] ;
+		++count;
 	}*/
 
 	
-
-	return numOfWords;
+}
+int wordCount(char * sentence) {
+	int numOfWords = 0;
+	if (strlen(sentence) == 0) {
+		return numOfWords;
+	}
+	for (int i = 0; sentence[i] != '\0'; i++) {
+		if (sentence[i] == ' ') {
+			++numOfWords;
+		}
+	}
+	return numOfWords + 1;
 }
 void nameFormatter(char * first, char * middle, char * last, char * fullName) {
-	// TO DO: implement this function
 	strncpy(fullName, last, strlen(last));
 	strncat(fullName, ", ", 2);
 	strncat(fullName, first, strlen(first));
