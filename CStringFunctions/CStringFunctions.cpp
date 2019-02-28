@@ -52,20 +52,15 @@ int main() {
 
 void reverse(char * word) {
 	
-	/*char temp = ' ';
-	for (int a = 0, z = strlen(word); a < strlen(word); ++a, --z) {
-		temp = word[a];
-		word[a] = word[z];
-		word[z] = temp;
-	}*/
-	/*int count = 0;
-	char wordRev[] = {};
-	strncpy(wordRev, word, strlen(word));
-	for (size_t r = strlen(word); r >= 0; --r) {
-		word[count] = wordRev[r] ;
-		++count;
-	}*/
+	for ( int i = 0; i < strlen(word) / 2; i++)
+	{
+		char temp = word[i];
+		word[i] = word[strlen(word) - i - 1];
+		word[strlen(word) - i - 1] = temp;
+	}
 
+	// more advanced way to do it
+	// reverse(word, word + strlen(word));
 	
 }
 int wordCount(char * sentence) {
